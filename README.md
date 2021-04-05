@@ -1,7 +1,7 @@
 # Activity Clustering using Multimodal Machine Learning for Android Apps
 
 ## Overview
-This project is a Torch implementation for our ICSE 2021 submit paper, which activity clustering using multimodal machine learning for android apps.
+This project is activity clustering using multimodal machine learning for android apps.
 
 ## Hardware
 The models are trained using folloing hardware:
@@ -43,7 +43,10 @@ https://storage.cloud.google.com/crowdstf-rico-uiuc-4540/rico_dataset_v0.1/seman
 ## HOW TO EXECUTE OUR MODEL?
 ## Data Processing
 Generate training data based on the RICO dataset and download the RICO latent vector.
-$ . ./data_processing.sh
+```     sh
+. ./data_processing.sh
+```
+
 
 => output
  data/rico/
