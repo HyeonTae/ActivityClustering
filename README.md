@@ -129,8 +129,9 @@ You can compare the results of the nearest neighbor search for a test data set. 
 $ cd ../search
 $ . ./search.sh
 ```
-```
+
 => output
+```
  search/result/
 ```
 
