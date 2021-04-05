@@ -52,6 +52,7 @@ $ . ./data_processing.sh
 
 
 => output
+```
  data/rico/
  data_processing/semantic_annotations/
  data_processing/activate/
@@ -59,6 +60,7 @@ $ . ./data_processing.sh
  autoencoder/seq2seq/data/train_data.txt
  autoencoder/seq2seq/data/val_data.txt
  autoencoder/seq2seq/data/test_data.txt
+```
 
 ## Seq2seq Autoencoder training and vector extraction
 Train the data 5-iterations with the seq2seq autoencoder and extract the latent vector.
