@@ -70,8 +70,10 @@ $ . ./train.sh
 ```
 
 => output
+```
  autoencoder/seq2seq/log/
  data/seq2seq_n/
+```
 
 ## Conv Autoencoder training and vector extraction
 Train the data 5-iterations with the conv autoencoder and extract the latent vector.
@@ -81,9 +83,11 @@ $ . ./train.sh
 ```
 
 => output
+```
  autoencoder/conv/log/
  data/conv_se_n/
  data/conv_re_n/
+```
 
 ## Test data extraction and data fusion
 Test data is extracted based on pre-categorized ground truth and data fusion is performed with a defined scaling method and weight.
@@ -102,8 +106,10 @@ $ . ./clustering.sh
 ```
 
 => output
+```
  clustering/result/
  clustering/visualization/
+```
 
 ## Evaluation
 The clustering result is evaluated by Purity, Normalized Mutual Information (NMI), and Adjusted Rand index (ARI).
@@ -113,7 +119,9 @@ $ . ./evaluation.sh
 ```
 
 => output
+```
  evaluation/csv/
+```
 
 ## Nearest neighbor search
 You can compare the results of the nearest neighbor search for a test data set. Saves the top 6 images of the search results.
@@ -121,7 +129,8 @@ You can compare the results of the nearest neighbor search for a test data set. 
 $ cd ../search
 $ . ./search.sh
 ```
-
+```
 => output
-search/result/
+ search/result/
+```
 
