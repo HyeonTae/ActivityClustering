@@ -25,9 +25,11 @@ Etc. (Included in "requirements.txt")
 
 ## Prerequisite
 - Use Tkinter
+```     sh
 $ sudo apt-get install python3-tk
-
+```
 - Use virtualenv
+```     sh
 $ sudo apt-get install build-essential libssl-dev libffi-dev python-dev
 $ sudo apt install python3-pip
 $ sudo pip3 install virtualenv
@@ -35,6 +37,7 @@ $ virtualenv -p python3 env3
 $ . env3/bin/activate
 $ # code your stuff
 $ deactivate
+```
 
 ## Datasets
 Our dataset is based on the dataset provided by RICO.
@@ -44,7 +47,7 @@ https://storage.cloud.google.com/crowdstf-rico-uiuc-4540/rico_dataset_v0.1/seman
 ## Data Processing
 Generate training data based on the RICO dataset and download the RICO latent vector.
 ```     sh
-. ./data_processing.sh
+$ . ./data_processing.sh
 ```
 
 
@@ -59,8 +62,10 @@ Generate training data based on the RICO dataset and download the RICO latent ve
 
 ## Seq2seq Autoencoder training and vector extraction
 Train the data 5-iterations with the seq2seq autoencoder and extract the latent vector.
+```     sh
 $ cd autoencoder/seq2seq
 $ . ./train.sh
+```
 
 => output
  autoencoder/seq2seq/log/
@@ -68,8 +73,10 @@ $ . ./train.sh
 
 ## Conv Autoencoder training and vector extraction
 Train the data 5-iterations with the conv autoencoder and extract the latent vector.
+```     sh
 $ cd autoencoder/conv
 $ . ./train.sh
+```
 
 => output
  autoencoder/conv/log/
@@ -78,15 +85,19 @@ $ . ./train.sh
 
 ## Test data extraction and data fusion
 Test data is extracted based on pre-categorized ground truth and data fusion is performed with a defined scaling method and weight.
+```     sh
 $ cd ../data
 $ . ./fusion.sh
+```
 
 => output
 
 ## Clustering
 Perform data clustering.
+```     sh
 $ cd ../clustering
 $ . ./clustering.sh
+```
 
 => output
  clustering/result/
@@ -94,22 +105,21 @@ $ . ./clustering.sh
 
 ## Evaluation
 The clustering result is evaluated by Purity, Normalized Mutual Information (NMI), and Adjusted Rand index (ARI).
+```     sh
 $ cd ../evaluation
 $ . ./evaluation.sh
+```
 
 => output
  evaluation/csv/
 
 ## Nearest neighbor search
 You can compare the results of the nearest neighbor search for a test data set. Saves the top 6 images of the search results.
+```     sh
 $ cd ../search
 $ . ./search.sh
+```
 
 => output
 search/result/
-
-## Known issues
-- According to seq2seq training, you may get different latent vectors than ours.
-  As a result, you can find different results from our paper.
-  Still fusion shows better performance than rico or seq2seq only.
 
